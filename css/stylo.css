@@ -1,0 +1,27 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+.tablas {
+  border: black solid 3px;
+  width: 700px;
+  grid-column: 2/3;
+}
+
+.cabeza th{
+  border: black solid 1px;
+}
+
+.separacion{
+    border: black solid 1px;
+}
+
+.btn{
+    grid-column: 3/3;
+    font-size: 10px;
+    height: 35px;
+    width: 75px;
+}
+  

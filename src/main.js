@@ -5,7 +5,9 @@
  * @param {Array}aregloDeObjectos serar los datos mediante un arrglo de objectos
  * */
 
-const muestra = async () => {
+import { crearT } from "./index.js";
+
+ export const muestra = async () => {
   const api = await fetch("https://jsonplaceholder.typicode.com/users/");
   const jason = api.json();
 
@@ -25,13 +27,10 @@ const objectos = (datos)=> {
     const array = {
       datosTodos:datos,  
       nombre: datos.name,
-      telefono: datos.phon,
+      telefono: datos.phone,
       correo: datos.email,
       cuida:  datos.address.city 
    };
-   //console.log(`nombre de: ${array.nombre}`);
-   //console.log(`telefono: ${array.telefono}`);
-   console.log(array.cuida);
+   return crearT(array.nombre,array.correo,array.telefono,array.cuida);   
 }
 
-muestra()
